@@ -9,6 +9,7 @@ gem 'mongoid', "~> 2.0"
 gem 'mongo_ext'
 gem 'mongoid_search', '0.2.4'
 gem 'mongoid_taggable', :git => "git://github.com/wilkerlucio/mongoid_taggable.git"
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
 
 gem 'heroku'
 
