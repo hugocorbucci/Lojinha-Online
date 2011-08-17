@@ -71,4 +71,10 @@ table {
 
 table tr td.product {
 	text-align: center;
+	border-top: 1px solid black;
+	padding: 15px 0px;
+}
+
+table.photos tr td {
+	padding: 5px;
 }

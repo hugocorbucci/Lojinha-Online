@@ -6,12 +6,12 @@
   <b>por</b> <%= to_currency(@product.price) %>
 </p>
 
-<table>
+<table class="photos">
   <% @product.photos.each_slice(5).each do |photo_row| %>
     <tr>
       <% photo_row.each do |photo| %>
         <td>
-          <%= image_tag photo.image.url(:medium) %>
+          <%= link_to image_tag(photo.image.url(:medium), :alt => "Clique na foto para vê-la no tamanho original"), photo.image.url %>
         </td>
       <% end %>
     </tr>
@@ -27,7 +27,7 @@
 
 <% unless @product.link.blank? %>
   <p>
-    <b>Link para o produto novo em loja:</b>
+    <b>Link:</b>
     <%= link_to @product.link %>
   </p>
 <% end %>

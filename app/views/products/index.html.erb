@@ -9,7 +9,7 @@
       <td class="product">
         <h5><%= link_to "#{product._id}. #{product.name} - #{to_currency(product.price)}", product_path(product) %></h5>
         <% product.photos[0...1].each do |photo| %>
-          <%= image_tag photo.image.url(:thumb) %>
+          <%= link_to image_tag(photo.image.url(:thumb), :alt => "Clique para ver mais detalhes sobre o item"), product_path(product) %>
         <% end %>
       </td>
     <% end %>
