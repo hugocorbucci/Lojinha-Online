@@ -1,15 +1,18 @@
 class Product
   include Mongoid::Document
+  include Mongoid::Search
   include Mongoid::Timestamps
-  include Mongoid::Paperclip
   
-  has_mongoid_attached_file :photo, :styles => { :medium => "800x600>", :thumb => "160x120>" }
+  embeds_many :photos
   
+  search_in :name, :description
+  
+  field :id, :type => Integer
   field :name, :type => String
-  field :price, :type => Float
+  field :price, :type => Integer
   field :description, :type => String
   
-  validates_attachment_presence :photo
-  validates_attachment_size :photo, :less_than => 5.megabytes
-  validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
+  validates_presence_of :id, :name, :price
+  
+  scope :sorted, order_by(:_id => :asc)
 end

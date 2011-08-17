@@ -1,25 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>Nome:</b>
   <%= @product.name %>
 </p>
 
 <p>
-  <b>Price:</b>
+  <b>Preço:</b>
   <%= @product.price %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Descrição:</b>
   <%= @product.description %>
 </p>
 
 <p>
-  <b>Photo:</b>
-  <%= image_tag @product.photo.url(:medium) %>
+  <b>Foto(s):</b>
+  <% product.photos.each do |photo| %>
+    <%= image_tag photo.image.url(:medium) %>
+  <% end %>
 </p>
 
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Voltar', products_path %>
