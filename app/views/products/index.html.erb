@@ -1,23 +1,16 @@
 <h1>Lista de itens</h1>
 
 <table width="100%">
+<% @products.each_slice(5) do |product_row| %>
   <tr>
-    <th>Nome</th>
-    <th>Preço</th>
-    <th>Descrição</th>
-    <th>Foto(s)</th>
-  </tr>
-
-<% @products.each do |product| %>
-  <tr>
-    <td><%= product.name %></td>
-    <td><%= number_to_currency(product.price, :locale => :pt, :format => "R%u %n") %></td>
-    <td><%= product.description %></td>
-    <td>
-      <% product.photos.each do |photo| %>
-        <%= image_tag photo.image.url(:thumb) %>
-      <% end %>
-    </td>
+    <% product_row.each do |product| %>
+      <td class="product">
+        <h5><%= link_to "#{product._id}. #{product.name} - #{to_currency(product.price)}", product_path(product) %></h5>
+        <% product.photos[0...1].each do |photo| %>
+          <%= image_tag photo.image.url(:thumb) %>
+        <% end %>
+      </td>
+    <% end %>
   </tr>
 <% end %>
 </table>

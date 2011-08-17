@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.xml
   def show
-    @product = Product.find(params[:id])
+    @product = Product.where(:_id => params[:id].to_i).first
 
     respond_to do |format|
       format.html # show.html.erb

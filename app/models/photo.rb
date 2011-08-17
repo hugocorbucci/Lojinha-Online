@@ -11,7 +11,7 @@ class Photo
        :access_key_id => ENV['S3_KEY'],
        :secret_access_key => ENV['S3_SECRET']
      },
-     :path => "#{ENV["RAILS_ENV"]}/:attachment/:id/:style/:filename",
+     :path => "#{Rails.env}/:attachment/:id/:style/:filename",
      :styles => { :medium => "800x600>", :thumb => "160x120>" }
   
   validates_attachment_presence :image

@@ -1,25 +1,36 @@
+<h1><%= @product._id %>. <%= @product.name %></h1>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Nome:</b>
-  <%= @product.name %>
+  <b>por</b> <%= to_currency(@product.price) %>
 </p>
 
-<p>
-  <b>Preço:</b>
-  <%= @product.price %>
-</p>
-
-<p>
-  <b>Descrição:</b>
-  <%= @product.description %>
-</p>
-
-<p>
-  <b>Foto(s):</b>
-  <% product.photos.each do |photo| %>
-    <%= image_tag photo.image.url(:medium) %>
+<table>
+  <% @product.photos.each_slice(5).each do |photo_row| %>
+    <tr>
+      <% photo_row.each do |photo| %>
+        <td>
+          <%= image_tag photo.image.url(:medium) %>
+        </td>
+      <% end %>
+    </tr>
   <% end %>
-</p>
+</table>
 
+<% unless @product.description.blank? %>
+  <p>
+    <b>Descrição:</b>
+    <%= @product.description %>
+  </p>
+<% end %>
+
+<% unless @product.link.blank? %>
+  <p>
+    <b>Link para o produto novo em loja:</b>
+    <%= link_to @product.link %>
+  </p>
+<% end %>
+
+<br/><br/>
 <%= link_to 'Voltar', products_path %>
