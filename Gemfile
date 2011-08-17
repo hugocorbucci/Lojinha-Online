@@ -12,7 +12,7 @@ gem 'mongoid_taggable', :git => "git://github.com/wilkerlucio/mongoid_taggable.g
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 
 gem 'heroku'
-gem 'aws-s3'
+gem 'aws-s3', :require => 'aws/s3'
 
 group :test, :development do
   gem 'rr'
