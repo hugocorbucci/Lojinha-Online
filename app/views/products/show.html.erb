@@ -3,7 +3,7 @@
 <p id="notice"><%= notice %></p>
 
 <% if @product.sold %>
-<h2 class="sold">VENDIDO</h2>
+<h2 class="sold">VENDIDO por <%= to_currency(@product.price) %></h2>
 <% else %>
 <p>
   <b>por</b> <%= to_currency(@product.price) %>
