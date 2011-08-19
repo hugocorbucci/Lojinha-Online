@@ -3,7 +3,7 @@
 <p>Se algum dos itens abaixo lhe interessar, por favor, mande um email para <%= mail_to "hugomari@agilbits.com.br" %> com seu nome e telefone para que possamos combinar o pagamento e retirada.</p>
 
 <table width="100%">
-<% @products.each_slice(5) do |product_row| %>
+<% @available.each_slice(5) do |product_row| %>
   <tr>
     <% product_row.each do |product| %>
       <td class="product">
@@ -15,6 +15,20 @@
     <% end %>
   </tr>
 <% end %>
+
+<% @sold.each_slice(5) do |product_row| %>
+  <tr>
+    <% product_row.each do |product| %>
+      <td class="product sold">
+        <h5><%= link_to "#{product._id}. #{product.name} - #{to_currency(product.price)}", product_path(product) %></h5>
+        <% product.photos[0...1].each do |photo| %>
+          <%= link_to image_tag(photo.image.url(:thumb), :alt => "Clique para ver mais detalhes sobre o item"), product_path(product) %>
+        <% end %>
+      </td>
+    <% end %>
+  </tr>
+<% end %>
+
 </table>
 
 <br />

@@ -78,3 +78,12 @@ table tr td.product {
 table.photos tr td {
 	padding: 5px;
 }
+
+h1.sold,h2.sold,h5.sold {
+	color: red;
+}
+
+.sold a {
+	color: red;
+	text-decoration: line-through;
+}

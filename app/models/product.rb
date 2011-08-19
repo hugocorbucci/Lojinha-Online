@@ -11,8 +11,11 @@ class Product
   field :name, :type => String
   field :price, :type => Integer
   field :description, :type => String
+  field :sold, :type => Boolean
   
   validates_presence_of :id, :name, :price
   
   scope :sorted, order_by(:_id => :asc)
+  scope :available, where(:sold.ne => true)
+  scope :sold, where(sold: true)
 end

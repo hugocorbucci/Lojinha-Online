@@ -36,7 +36,7 @@ class PhotoImport
   
   def extract_products(filepath)
     photos = Dir.glob(File.join(filepath, "*-*.*"))
-    photos.map{|photo| photo.match(/(\d+)-\d+\..+/)[1].to_i }.uniq
+    photos.map{|photo| photo.match(/(\d+)-\d+\..+/)[1].to_i }.uniq.sort
   end
   
   def populate(product, id)
@@ -44,7 +44,7 @@ class PhotoImport
 
     filenames = File.join(@filepath, to_path(id)) + "-*.*"
     photos = Dir.glob(filenames)
-    photos.select{|photo| photo.match(/[^\/]*\/\d+-(\d+)\..+/)[1].to_i >= indexed_count }.each do |photo|   
+    photos.select{|photo| photo.match(/[^\/]*\/\d+-(\d+)\..+/)[1].to_i > indexed_count }.sort.each do |photo|   
       puts "Adding picture at '#{photo}' to product with id #{id}"
       product.photos << Photo.new(:image => File.new(photo))
     end
