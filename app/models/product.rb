@@ -19,3 +19,4 @@ class Product
   scope :available, where(:sold.ne => true)
   scope :sold, where(sold: true)
 end
+
