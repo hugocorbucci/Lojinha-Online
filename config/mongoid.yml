@@ -1,18 +1,13 @@
 development:
   host: localhost
-  port: 27017 #<%= ENV['MONGOID_PORT'] %>
+  port: 27017
   database: lojinha
 
 test:
   host: localhost
-  port: 27017 #<%= ENV['MONGOID_PORT'] %>
-  database: lojinha #<%= ENV['MONGOID_DATABASE'] %>
+  port: 27017
+  database: lojinha
 
-# set these environment variables on your prod server
 production:
-  host: <%= ENV['MONGOID_HOST'] %>
-  port: <%= ENV['MONGOID_PORT'] %>
-  username: <%= ENV['MONGOID_USERNAME'] %>
-  password: <%= ENV['MONGOID_PASSWORD'] %>
-  database: <%= ENV['MONGOID_DATABASE'] %> 
+  uri: <%= ENV['MONGOHQ_URL'] %>
 
