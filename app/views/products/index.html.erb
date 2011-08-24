@@ -1,8 +1,9 @@
-<h1>Lista de itens</h1>
+<h1>Itens</h1>
 
-<p>Se algum dos itens abaixo lhe interessar, por favor, mande um email para <%= mail_to "hugomari@agilbits.com.br" %> com seu nome e telefone para que possamos combinar o pagamento e retirada.</p>
+<p>Os pre&ccedil;os s&atilde;o a nossa sugest&atilde;o. Se tiver interesse por algum dos itens, por favor, mande um email para <%= mail_to "fabio.kung+nathalia@gmail.com" %> para que possamos combinar o pagamento e retirada.</p>
 
 <table width="100%">
+<h2>Dispon&iacute;veis</h2>
 <% @available.each_slice(5) do |product_row| %>
   <tr>
     <% product_row.each do |product| %>
@@ -16,6 +17,7 @@
   </tr>
 <% end %>
 
+<h2>Vendidos</h2>
 <% @sold.each_slice(5) do |product_row| %>
   <tr>
     <% product_row.each do |product| %>
