@@ -29,7 +29,7 @@
 
 <% unless @product.link.blank? %>
   <h3>Link:</h3>
-  <p><%= link_to @product.link %></p>
+  <p><%= link_to @product.link, @product.link %></p>
 <% end %>
 
 <br/>
