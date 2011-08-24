@@ -4,3 +4,4 @@ log/*.log
 tmp/
 products.csv
 photos/
+photos-big/
