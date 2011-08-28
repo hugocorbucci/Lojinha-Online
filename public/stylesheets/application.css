@@ -1,89 +1,34 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
-
-body {
-  line-height: 1px;
- 	margin: 5px; }
-
-ol, ul {
-  list-style-position: inside; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-  content: none; }
-
-:focus {
-  outline: 0; }
-
-ins {
-  text-decoration: none; }
-
-del {
-  text-decoration: line-through; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-body {
-  font: 13px/1.5 "Helvetica Neue", "Arial", "Liberation Sans", "FreeSans", "sans-serif";
-	font-size: 15px; }
-
-a:focus {
-  outline: 1px dotted; }
-
-hr {
-  border: 0 #cccccc solid;
-  border-top-width: 1px;
-  clear: both;
-  height: 0; }
-
-h1 {
-  font-size: 25px; }
-
-h2 {
-  font-size: 23px; }
-
-h3 {
-  font-size: 21px; }
-
-h4 {
-  font-size: 19px; }
-
-h5 {
-  font-size: 17px; }
-
-h6 {
-  font-size: 15px; }
-
-table {
-	margin: 10px 5px;
+.top {
+  background: #1B1B24 url(../images/plane.png) no-repeat 5px 5px;
+  height: 230px;
+  font-family: arial, helvetica, sans-serif;
+  color: #D4D4FF;
+}
+.top p {
+  color: #C9C3E6;
+  font-weight: normal;
+  background-color: #29264D;
+  font-size: 16px;
+  padding: 10px 5px;
+  border-bottom: 3px solid #494573;
+}
+.top p a {
+  color: #BFF740;
+  text-decoration: none;
 }
 
-table tr td.product {
-	text-align: center;
-	border-top: 1px solid black;
-	padding: 15px 0px;
+.top h1 {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-size: 62px;
+  color: white;
+  text-shadow: black 0px 1px 1px;
+  padding: 20px 0 0 300px;
 }
 
-table.photos tr td {
-	padding: 5px;
-}
-
-h1.sold,h2.sold,h5.sold {
-	color: red;
-}
-
-.sold a {
-	color: red;
-	text-decoration: line-through;
+.top h1 em {
+  font-family: Rockwell, 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  color: #A292FF;
+  font-size: 25px;
+  display: block;
+  padding: 0 0 0 83px;
 }

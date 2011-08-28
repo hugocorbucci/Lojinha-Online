@@ -1,36 +1,33 @@
-<h1>Bota fora!</h1>
-
-<p>Os pre&ccedil;os s&atilde;o a nossa sugest&atilde;o. Se tiver interesse por algum dos itens, por favor, mande um email para <%= mail_to "fabio.kung+nathalia@gmail.com" %> para que possamos combinar o pagamento e retirada.</p>
-
-<table width="100%">
-  <tr><th><h2>Dispon&iacute;veis</h2></th></tr>
-<% @available.each_slice(5) do |product_row| %>
-  <tr>
-    <% product_row.each do |product| %>
-      <td class="product">
-        <h5><%= link_to "#{product._id}. #{product.name} - #{to_currency(product.price)}", product_path(product) %></h5>
-        <% product.photos[0...1].each do |photo| %>
-          <%= link_to image_tag(photo.image.url(:thumb), :alt => "Clique para ver mais detalhes sobre o item"), product_path(product) %>
+<div class="content">
+  <table width="100%">
+    <tr><th><h2>Dispon&iacute;veis</h2></th></tr>
+    <% @available.each_slice(5) do |product_row| %>
+      <tr>
+        <% product_row.each do |product| %>
+          <td class="product">
+            <h5><%= link_to "#{product._id}. #{product.name} - #{to_currency(product.price)}", product_path(product) %></h5>
+            <% product.photos[0...1].each do |photo| %>
+              <%= link_to image_tag(photo.image.url(:thumb), :alt => "Clique para ver mais detalhes sobre o item"), product_path(product) %>
+            <% end %>
+          </td>
         <% end %>
-      </td>
+      </tr>
     <% end %>
-  </tr>
-<% end %>
 
-  <tr><th><h2>Vendidos</h2></th></tr>
-<% @sold.each_slice(5) do |product_row| %>
-  <tr>
-    <% product_row.each do |product| %>
-      <td class="product sold">
-        <h5><%= link_to "#{product._id}. #{product.name} - #{to_currency(product.price)}", product_path(product) %></h5>
-        <% product.photos[0...1].each do |photo| %>
-          <%= link_to image_tag(photo.image.url(:thumb), :alt => "Clique para ver mais detalhes sobre o item"), product_path(product) %>
+    <tr><th><h2>Vendidos</h2></th></tr>
+    <% @sold.each_slice(5) do |product_row| %>
+      <tr>
+        <% product_row.each do |product| %>
+          <td class="product sold">
+            <h5><%= link_to "#{product._id}. #{product.name} - #{to_currency(product.price)}", product_path(product) %></h5>
+            <% product.photos[0...1].each do |photo| %>
+              <%= link_to image_tag(photo.image.url(:thumb), :alt => "Clique para ver mais detalhes sobre o item"), product_path(product) %>
+            <% end %>
+          </td>
         <% end %>
-      </td>
+      </tr>
     <% end %>
-  </tr>
-<% end %>
 
-</table>
+  </table>
+</div>
 
-<br />
