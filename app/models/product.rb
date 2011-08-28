@@ -18,5 +18,11 @@ class Product
   scope :sorted, order_by(:_id => :asc)
   scope :available, where(:sold.ne => true)
   scope :sold, where(sold: true)
+
+  def sell_to(name)
+    self[:buyer] = name
+    self.sold = true
+    self.save!
+  end
 end
 
