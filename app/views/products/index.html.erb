@@ -1,6 +1,6 @@
 <div class="content">
   <h2>Dispon&iacute;veis</h2>
-  <table width="100%">
+  <table width="97%" align="center">
     <% @available.each_slice(5) do |product_row| %>
       <tr>
         <% product_row.each do |product| %>
@@ -16,7 +16,7 @@
   </table>
 
   <h2>Vendidos</h2>
-  <table width="100%">
+  <table width="97%" align="center">
     <% @sold.each_slice(5) do |product_row| %>
       <tr>
         <% product_row.each do |product| %>

@@ -6,12 +6,14 @@ body {
   height: 230px;
   font-family: arial, helvetica, sans-serif;
   color: #D4D4FF;
+  border-bottom: 1px solid #242E34;
 }
 .top p {
   color: #C9C3E6;
+  font-family: Verdana;
   font-weight: normal;
   background-color: #29264D;
-  font-size: 16px;
+  font-size: 13px;
   padding: 10px 5px;
   border-bottom: 3px solid #494573;
 }
@@ -61,6 +63,10 @@ body {
   padding: 5px;
   border: none;
   text-align: center;
+}
+
+.product:hover {
+  background-color: #F0F0F0;
 }
 
 .product h3 {
