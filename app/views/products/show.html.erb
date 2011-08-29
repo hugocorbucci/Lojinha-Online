@@ -9,17 +9,13 @@
 
 <p id="notice"><%= notice %></p>
 
-<table class="photos">
-  <% @product.photos.each_slice(5).each do |photo_row| %>
-    <tr>
-      <% photo_row.each do |photo| %>
-        <td class="photo">
-          <%= link_to image_tag(photo.image.url(:medium), :alt => "Clique na foto para vê-la no tamanho original"), photo.image.url %>
-        </td>
-      <% end %>
-    </tr>
-  <% end %>
-</table>
+<div class="photos">
+  <ul id="photos">
+    <% @product.photos.each do |photo| %>
+      <li><%= link_to image_tag(photo.image.url(:medium), :alt => "Clique na foto para vê-la no tamanho original"), photo.image.url %></li>
+    <% end %>
+  </ul>
+</div>
 
 <div class="description">
   <% unless @product.description.blank? %>
@@ -33,4 +29,10 @@
 </div>
 
 <%= link_to 'Voltar', products_path %>
+
+<script language="javascript" type="text/javascript"> 
+  $(document).ready(function() {
+    $("#photos").PikaChoose();
+  });
+</script>
 
