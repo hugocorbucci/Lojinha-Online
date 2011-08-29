@@ -50,7 +50,7 @@ body {
   color: #CFF0FF;
   font-size: 26px;
   text-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 1px;
-  padding: 15px 40px;
+  padding: 15px 30px;
 }
 
 .content table {
@@ -81,5 +81,43 @@ body {
   color: #666666;
 }
 .product h3 a em {
-  color: #aaaaaa;
+  color: #999999;
+}
+
+.photo {
+  border: none;
+  padding: 5px;
+}
+
+.description {
+  margin: 10px;
+  border: 1px solid #cccccc;
+  padding-bottom: 5px;
+}
+
+.description p {
+  font-size: 16px;
+  padding: 5px 10px 15px 10px;
+  color: #333333;
+  background-color: white;
+}
+
+.description p a {
+  background-color: #243f46;
+  color: #CFF0FF;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 5px 10px;
+}
+
+.description p a:hover {
+  color: #90bba7;
+}
+
+.description h3 {
+  background-color: #cccccc;
+  font-size: 20px;
+  color: #333333;
+  padding: 5px 10px;
+  margin-bottom: 10px;
 }

@@ -1,20 +1,19 @@
-<h1 class="<%= @product.sold ? "sold" : "" %>"><%= @product._id %>. <%= @product.name %></h1>
+<h2 class="<%= @product.sold ? "sold" : "" %>">
+  <%= @product.name %>
+  <% if @product.sold %>
+    <em class="sold">VENDIDO por <%= to_currency(@product.price) %></em>
+  <% else %>
+    <em>por <%= to_currency(@product.price) %></em>
+  <% end %>
+</h2>
 
 <p id="notice"><%= notice %></p>
-
-<% if @product.sold %>
-<h2 class="sold">VENDIDO por <%= to_currency(@product.price) %></h2>
-<% else %>
-<p>
-  <b>por</b> <%= to_currency(@product.price) %>
-</p>
-<% end %>
 
 <table class="photos">
   <% @product.photos.each_slice(5).each do |photo_row| %>
     <tr>
       <% photo_row.each do |photo| %>
-        <td>
+        <td class="photo">
           <%= link_to image_tag(photo.image.url(:medium), :alt => "Clique na foto para vê-la no tamanho original"), photo.image.url %>
         </td>
       <% end %>
@@ -22,19 +21,16 @@
   <% end %>
 </table>
 
-<% unless @product.description.blank? %>
-  <h3>Descrição:</h3>
-  <p><%=raw @product.description %></p>
-<% end %>
+<div class="description">
+  <% unless @product.description.blank? %>
+    <h3>Descrição</h3>
+    <p><%=raw @product.description %></p>
+  <% end %>
+  <% unless @product.link.blank? %>
+    <h3>Mais Info</h3>
+    <p><%= link_to @product.link, @product.link %></p>
+  <% end %>
+</div>
 
-<% unless @product.link.blank? %>
-  <h3>Link:</h3>
-  <p><%= link_to @product.link, @product.link %></p>
-<% end %>
-
-<br/>
-
-<p>Os pre&ccedil;os s&atilde;o a nossa sugest&atilde;o. Se tiver interesse por algum dos itens, por favor, mande um email para <%= mail_to "fabio.kung+nathalia@gmail.com" %> para que possamos combinar o pagamento e retirada.</p>
-
-<br/><br/>
 <%= link_to 'Voltar', products_path %>
+
