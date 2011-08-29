@@ -95,15 +95,13 @@ body {
 .description {
   margin: 10px;
   border: 1px solid #cccccc;
-  padding-bottom: 5px;
 }
 
 .description p {
   font-size: 16px;
-  padding: 5px 10px 20px 10px;
+  padding: 15px 10px 20px 10px;
   color: #333333;
   background-color: white;
-  margin-top: 10px;
 }
 
 .description p a {
