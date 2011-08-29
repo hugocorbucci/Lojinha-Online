@@ -1,19 +1,20 @@
+* {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
 body {
   background-color: #F0F0F0;
 }
 .top {
   background: #1B1B24 url(../images/plane.png) no-repeat 5px 5px;
   height: 230px;
-  font-family: arial, helvetica, sans-serif;
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
   color: #D4D4FF;
   border-bottom: 1px solid #242E34;
 }
 .top p {
   color: #C9C3E6;
-  font-family: Verdana;
-  font-weight: normal;
   background-color: #29264D;
-  font-size: 13px;
+  font-size: 14px;
   padding: 10px 5px;
   border-bottom: 3px solid #494573;
 }
@@ -27,10 +28,9 @@ body {
 }
 
 .top h1 {
-  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-size: 62px;
   text-shadow: black 0px 1px 1px;
-  padding: 25px 0 0 300px;
+  padding: 25px 0 0 330px;
 }
 
 .top h1 a {
@@ -39,11 +39,11 @@ body {
 }
 
 .top h1 a em {
-  font-family: Rockwell, 'Trebuchet MS', Arial, Helvetica, sans-serif;
   color: #A292FF;
   font-size: 25px;
   display: block;
-  padding: 0 0 0 140px;
+  padding: 0 0 0 200px;
+  font-style: italic;
 }
 
 .content {
@@ -51,18 +51,17 @@ body {
 }
 
 .content h2 {
-  font-family: CorbelRegular, Arial, Helvetica, sans-serif;
   background-color: #1B2429;
   border-top: 2px solid #242E34;
   border-bottom: 2px solid #242E34;
   color: #CFF0FF;
-  font-size: 26px;
+  font-size: 25px;
   text-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 1px;
   padding: 15px 30px;
 }
 
 .content h2 em {
-  font-size: 23px;
+  font-size: 20px;
   color: #abe383;
   padding: 0 0 0 10px;
 }
