@@ -29,12 +29,16 @@ body {
 .top h1 {
   font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-size: 62px;
-  color: white;
   text-shadow: black 0px 1px 1px;
   padding: 25px 0 0 300px;
 }
 
-.top h1 em {
+.top h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.top h1 a em {
   font-family: Rockwell, 'Trebuchet MS', Arial, Helvetica, sans-serif;
   color: #A292FF;
   font-size: 25px;
