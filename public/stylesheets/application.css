@@ -77,6 +77,10 @@ body {
   background-color: #F0F0F0;
 }
 
+.product.sold {
+  text-decoration: line-through;
+}
+
 .product h3 {
   background-color: #ebebeb;
   border-bottom: 1px solid #e2e2e2;
