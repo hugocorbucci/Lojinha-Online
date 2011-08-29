@@ -1,5 +1,5 @@
 <h2 class="<%= @product.sold ? "sold" : "" %>">
-  <%= @product.name %>
+  Item #<%= @product.id %>: <%= @product.name %>
   <% if @product.sold %>
     <em class="sold">VENDIDO por <%= to_currency(@product.price) %></em>
   <% else %>
