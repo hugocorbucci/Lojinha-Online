@@ -1,11 +1,11 @@
 <div class="content">
+  <h2>Dispon&iacute;veis</h2>
   <table width="100%">
-    <tr><th><h2>Dispon&iacute;veis</h2></th></tr>
     <% @available.each_slice(5) do |product_row| %>
       <tr>
         <% product_row.each do |product| %>
           <td class="product">
-            <h5><%= link_to "#{product._id}. #{product.name} - #{to_currency(product.price)}", product_path(product) %></h5>
+            <h3><%= link_to "#{product._id}. #{product.name} - #{to_currency(product.price)}", product_path(product) %></h3>
             <% product.photos[0...1].each do |photo| %>
               <%= link_to image_tag(photo.image.url(:thumb), :alt => "Clique para ver mais detalhes sobre o item"), product_path(product) %>
             <% end %>
@@ -13,13 +13,15 @@
         <% end %>
       </tr>
     <% end %>
+  </table>
 
-    <tr><th><h2>Vendidos</h2></th></tr>
+  <h2>Vendidos</h2>
+  <table width="100%">
     <% @sold.each_slice(5) do |product_row| %>
       <tr>
         <% product_row.each do |product| %>
           <td class="product sold">
-            <h5><%= link_to "#{product._id}. #{product.name} - #{to_currency(product.price)}", product_path(product) %></h5>
+            <h3><%= link_to "#{product._id}. #{product.name} - #{to_currency(product.price)}", product_path(product) %></h3>
             <% product.photos[0...1].each do |photo| %>
               <%= link_to image_tag(photo.image.url(:thumb), :alt => "Clique para ver mais detalhes sobre o item"), product_path(product) %>
             <% end %>
@@ -27,7 +29,6 @@
         <% end %>
       </tr>
     <% end %>
-
   </table>
 </div>
 

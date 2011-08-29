@@ -1,3 +1,6 @@
+body {
+  background-color: #F0F0F0;
+}
 .top {
   background: #1B1B24 url(../images/plane.png) no-repeat 5px 5px;
   height: 230px;
@@ -17,12 +20,16 @@
   text-decoration: none;
 }
 
+.top p a:hover {
+  color: white;
+}
+
 .top h1 {
   font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-size: 62px;
   color: white;
   text-shadow: black 0px 1px 1px;
-  padding: 20px 0 0 300px;
+  padding: 25px 0 0 300px;
 }
 
 .top h1 em {
@@ -30,5 +37,34 @@
   color: #A292FF;
   font-size: 25px;
   display: block;
-  padding: 0 0 0 83px;
+  padding: 0 0 0 140px;
+}
+
+.content h2 {
+  font-family: CorbelRegular, Arial, Helvetica, sans-serif;
+  background-color: #1B2429;
+  border-top: 2px solid #242E34;
+  border-bottom: 2px solid #242E34;
+  color: #CFF0FF;
+  font-size: 26px;
+  text-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 1px;
+  padding: 15px 40px;
+}
+
+.product {
+  background-color: white;
+  margin: 0;
+  padding: 0 10px;
+  border: none;
+}
+
+.product h3 {
+  background-color: #ebebeb;
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 14px;
+  padding: 5px;
+}
+.product h3 a {
+  text-decoration: none;
+  color: #666666;
 }
