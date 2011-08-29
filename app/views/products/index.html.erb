@@ -5,7 +5,7 @@
       <tr>
         <% product_row.each do |product| %>
           <td class="product">
-            <h3><%= link_to "#{product._id}. #{product.name} - #{to_currency(product.price)}", product_path(product) %></h3>
+            <h3><%= link_to raw("#{product.name}: <em>#{to_currency(product.price)}<em>"), product_path(product) %></h3>
             <% product.photos[0...1].each do |photo| %>
               <%= link_to image_tag(photo.image.url(:thumb), :alt => "Clique para ver mais detalhes sobre o item"), product_path(product) %>
             <% end %>

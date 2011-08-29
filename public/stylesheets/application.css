@@ -51,20 +51,29 @@ body {
   padding: 15px 40px;
 }
 
+.content table {
+  background-color: white;
+}
+
 .product {
   background-color: white;
   margin: 0;
-  padding: 0 10px;
+  padding: 5px;
   border: none;
+  text-align: center;
 }
 
 .product h3 {
   background-color: #ebebeb;
   border-bottom: 1px solid #e2e2e2;
-  font-size: 14px;
-  padding: 5px;
+  font-size: 15px;
+  padding: 5px 8px;
+  text-align: left;
 }
 .product h3 a {
   text-decoration: none;
   color: #666666;
+}
+.product h3 a em {
+  color: #aaaaaa;
 }
