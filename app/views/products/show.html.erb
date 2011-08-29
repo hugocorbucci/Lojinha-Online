@@ -9,8 +9,8 @@
 
 <p id="notice"><%= notice %></p>
 
-<div class="photos">
-  <ul id="photos">
+<div class="photos pikachoose">
+  <ul id="photos" class="jcarousel-skin-pika">
     <% @product.photos.each do |photo| %>
       <li><%= link_to image_tag(photo.image.url(:medium), :alt => "Clique na foto para vê-la no tamanho original"), photo.image.url %></li>
     <% end %>
@@ -32,7 +32,7 @@
 
 <script language="javascript" type="text/javascript"> 
   $(document).ready(function() {
-    $("#photos").PikaChoose();
+    $("#photos").PikaChoose({carousel:true, carouselVertical:true});
   });
 </script>
 

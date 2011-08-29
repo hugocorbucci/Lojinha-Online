@@ -6,3 +6,4 @@ tmp/
 products.csv
 photos/
 photos-big/
+.DS_Store

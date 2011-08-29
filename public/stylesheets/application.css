@@ -84,9 +84,8 @@ body {
   color: #999999;
 }
 
-.photo {
-  border: none;
-  padding: 5px;
+.photos {
+  padding: 10px 10px 120px 10px;
 }
 
 .description {
