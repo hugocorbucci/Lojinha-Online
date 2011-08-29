@@ -61,6 +61,20 @@ body {
   padding: 15px 30px;
 }
 
+.content h2 em {
+  font-size: 23px;
+  color: #abe383;
+  padding: 0 0 0 10px;
+}
+
+.content h2.sold {
+  color: #243f46;
+}
+
+.content h2 em strong {
+  font-weight: bold;
+}
+
 .content table {
   background-color: white;
 }

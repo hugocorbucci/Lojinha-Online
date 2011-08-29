@@ -1,10 +1,6 @@
 <h2 class="<%= @product.sold ? "sold" : "" %>">
   Item #<%= @product.id %>: <%= @product.name %>
-  <% if @product.sold %>
-    <em class="sold">VENDIDO por <%= to_currency(@product.price) %></em>
-  <% else %>
-    <em>por <%= to_currency(@product.price) %></em>
-  <% end %>
+  <em><% if @product.sold %><strong>vendido</strong> <% end %>por <%= to_currency(@product.price) %></em>
 </h2>
 
 <p id="notice"><%= notice %></p>
