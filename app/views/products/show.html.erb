@@ -16,11 +16,11 @@
 <div class="description">
   <% unless @product.description.blank? %>
     <h3>Descrição</h3>
-    <p><%=raw @product.description %></p>
+    <div><p><%=raw @product.description %></p></div>
   <% end %>
   <% unless @product.link.blank? %>
     <h3>Mais Info</h3>
-    <p><%= link_to @product.link, @product.link %></p>
+    <div><p><%= link_to @product.link, @product.link %></p></div>
   <% end %>
 </div>
 

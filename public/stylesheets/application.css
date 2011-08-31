@@ -114,14 +114,18 @@ body {
   border: 1px solid #cccccc;
 }
 
-.description p {
+.description div {
   font-size: 16px;
   padding: 15px 10px 20px 10px;
   color: #333333;
   background-color: white;
 }
 
-.description p a {
+.description div p {
+  padding: 5px 0
+}
+
+.description div a {
   background-color: #243f46;
   color: #CFF0FF;
   text-decoration: none;
@@ -129,7 +133,7 @@ body {
   padding: 5px 10px;
 }
 
-.description p a:hover {
+.description div a:hover {
   color: #90bba7;
 }
 
@@ -138,4 +142,16 @@ body {
   font-size: 20px;
   color: #333333;
   padding: 5px 10px;
+}
+
+.description ul,ol {
+  padding: 5px 10px;
+}
+
+.description ul li {
+  list-style: disc inside none;
+}
+
+.description ol li {
+  list-style: decimal inside none;
 }
