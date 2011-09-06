@@ -22,6 +22,8 @@ class Product
   def sell_to(name)
     self[:buyer] = name
     self.sold = true
+    self[:paid] = false
+    self[:delivered] = false
     self.save!
   end
 end
