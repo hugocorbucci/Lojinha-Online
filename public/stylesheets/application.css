@@ -1,89 +1,166 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+* {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #F0F0F0;
+}
+.top {
+  background: #1B1B24 url(../images/plane.png) no-repeat 5px 5px;
+  height: 230px;
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  color: #D4D4FF;
+  border-bottom: 1px solid #242E34;
+}
+.top p {
+  color: #C9C3E6;
+  background-color: #29264D;
+  font-size: 14px;
+  padding: 10px 5px;
+  border-bottom: 3px solid #494573;
+}
+.top p a {
+  color: #BFF740;
+  text-decoration: none;
+}
+
+.top p a:hover {
+  color: white;
+}
+
+.top h1 {
+  font-size: 62px;
+  text-shadow: black 0px 1px 1px;
+  padding: 25px 0 0 330px;
+}
+
+.top h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.top h1 a em {
+  color: #A292FF;
+  font-size: 25px;
+  display: block;
+  padding: 0 0 0 200px;
+  font-style: italic;
+}
+
+.content {
+  padding-bottom: 40px;
+}
+
+.content h2 {
+  background-color: #1B2429;
+  border-top: 2px solid #242E34;
+  border-bottom: 2px solid #242E34;
+  color: #CFF0FF;
+  font-size: 25px;
+  text-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 1px;
+  padding: 15px 30px;
+}
+
+.content h2 em {
+  font-size: 20px;
+  color: #abe383;
+  padding: 0 0 0 10px;
+}
+
+.content h2.sold {
+  color: #243f46;
+}
+
+.content h2 em strong {
+  font-weight: bold;
+}
+
+.content table {
+  background-color: white;
+}
+
+.product {
+  background-color: white;
   margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
-
-body {
-  line-height: 1px;
- 	margin: 5px; }
-
-ol, ul {
-  list-style-position: inside; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-  content: none; }
-
-:focus {
-  outline: 0; }
-
-ins {
-  text-decoration: none; }
-
-del {
-  text-decoration: line-through; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-body {
-  font: 13px/1.5 "Helvetica Neue", "Arial", "Liberation Sans", "FreeSans", "sans-serif";
-	font-size: 15px; }
-
-a:focus {
-  outline: 1px dotted; }
-
-hr {
-  border: 0 #cccccc solid;
-  border-top-width: 1px;
-  clear: both;
-  height: 0; }
-
-h1 {
-  font-size: 25px; }
-
-h2 {
-  font-size: 23px; }
-
-h3 {
-  font-size: 21px; }
-
-h4 {
-  font-size: 19px; }
-
-h5 {
-  font-size: 17px; }
-
-h6 {
-  font-size: 15px; }
-
-table {
-	margin: 10px 5px;
+  padding: 5px 5px 20px 5px;
+  border: none;
+  text-align: center;
 }
 
-table tr td.product {
-	text-align: center;
-	border-top: 1px solid black;
-	padding: 15px 0px;
+.product:hover {
+  background-color: #ebebeb;
 }
 
-table.photos tr td {
-	padding: 5px;
+.product.sold {
+  text-decoration: line-through;
 }
 
-h1.sold,h2.sold,h5.sold {
-	color: red;
+.product h3 {
+  background-color: #ebebeb;
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 15px;
+  padding: 5px 8px;
+  text-align: left;
+}
+.product h3 a {
+  text-decoration: none;
+  color: #666666;
+}
+.product h3 a em {
+  color: #999999;
 }
 
-.sold a {
-	color: red;
-	text-decoration: line-through;
+.description {
+  margin: 10px;
+  border: 1px solid #cccccc;
 }
+
+.description div {
+  font-size: 16px;
+  padding: 15px 10px 20px 10px;
+  color: #333333;
+  background-color: white;
+}
+
+.description div p {
+  padding: 5px 0
+}
+
+.description div a {
+  background-color: #243f46;
+  color: #CFF0FF;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 5px 10px;
+}
+
+.description div a:hover {
+  color: #90bba7;
+}
+
+.description h3 {
+  background-color: #cccccc;
+  font-size: 20px;
+  color: #333333;
+  padding: 5px 10px;
+}
+
+.description ul,ol {
+  padding: 5px 10px;
+}
+
+.description ul li {
+  list-style: disc inside none;
+}
+
+.description ol li {
+  list-style: decimal inside none;
+}
+
+.description strong {
+  font-weight: bold;
+}
+
+.description em {
+  font-style: italic;
+}
+

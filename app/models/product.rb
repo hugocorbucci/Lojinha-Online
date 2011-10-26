@@ -7,15 +7,39 @@ class Product
   
   search_in :name, :description
   
-  field :id, :type => Integer
-  field :name, :type => String
-  field :price, :type => Integer
-  field :description, :type => String
-  field :sold, :type => Boolean
+  field :id, type: Integer
+  field :name, type: String
+  field :price, type: Integer
+  field :description, type: String
+  field :buyer, type: String
+  field :sold, type: Boolean, default: false
+  field :paid, type: Boolean, default: false
+  field :delivered, type: Boolean, default: false
   
   validates_presence_of :id, :name, :price
   
-  scope :sorted, order_by(:_id => :asc)
+  scope :sorted, order_by(_id: :asc)
   scope :available, where(:sold.ne => true)
   scope :sold, where(sold: true)
+  scope :pending_payment, where(sold: true, paid: false)
+  scope :pending_delivery, where(sold: true, delivered: false)
+
+  def sell_to(name)
+    self[:buyer] = name
+    self.sold = true
+    self[:paid] = false
+    self[:delivered] = false
+    self.save!
+  end
+
+  def pay
+    self.paid = true
+    self.save!
+  end
+
+  def deliver
+    self.delivered = true
+    self.save!
+  end
 end
+

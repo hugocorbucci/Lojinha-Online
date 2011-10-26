@@ -1,44 +1,32 @@
-<h1 class="<%= @product.sold ? "sold" : "" %>"><%= @product._id %>. <%= @product.name %></h1>
+<h2 class="<%= @product.sold ? "sold" : "" %>">
+  Item #<%= @product.id %>: <%= @product.name %>
+  <em><% if @product.sold %><strong>vendido</strong> <% end %>por <%= to_currency(@product.price) %></em>
+</h2>
 
 <p id="notice"><%= notice %></p>
 
-<% if @product.sold %>
-<h2 class="sold">VENDIDO por <%= to_currency(@product.price) %></h2>
-<% else %>
-<p>
-  <b>por</b> <%= to_currency(@product.price) %>
-</p>
-<% end %>
+<div class="photos pikachoose">
+  <ul id="photos" class="jcarousel-skin-pika">
+    <% @product.photos.each do |photo| %>
+      <li><%= link_to image_tag(photo.image.url(:medium), :alt => "Clique na foto para vê-la no tamanho original"), photo.image.url %></li>
+    <% end %>
+  </ul>
+</div>
 
-<table class="photos">
-  <% @product.photos.each_slice(5).each do |photo_row| %>
-    <tr>
-      <% photo_row.each do |photo| %>
-        <td>
-          <%= link_to image_tag(photo.image.url(:medium), :alt => "Clique na foto para vê-la no tamanho original"), photo.image.url %>
-        </td>
-      <% end %>
-    </tr>
+<div class="description">
+  <% unless @product.description.blank? %>
+    <h3>Descrição</h3>
+    <div><p><%=raw @product.description %></p></div>
   <% end %>
-</table>
+  <% unless @product.link.blank? %>
+    <h3>Mais Info</h3>
+    <div><p><%= link_to @product.link, @product.link %></p></div>
+  <% end %>
+</div>
 
-<% unless @product.description.blank? %>
-  <p>
-    <b>Descrição:</b>
-    <%= @product.description %>
-  </p>
-<% end %>
+<script language="javascript" type="text/javascript"> 
+  $(document).ready(function() {
+    $("#photos").PikaChoose({carousel:true});
+  });
+</script>
 
-<% unless @product.link.blank? %>
-  <p>
-    <b>Link:</b>
-    <%= link_to @product.link %>
-  </p>
-<% end %>
-
-<br/>
-
-<p>Se algum quiser este e/ou outros itens, por favor, mande um email para <%= mail_to "hugomari@agilbits.com.br" %> com seu nome e telefone para que possamos combinar o pagamento e retirada.</p>
-
-<br/><br/>
-<%= link_to 'Voltar', products_path %>
