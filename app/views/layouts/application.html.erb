@@ -1,12 +1,25 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-  <title>Hugo e Mari mudam pra Chicago - Compre TUDO!</title>
+  <title>Bota fora Fabio e Nathalia: vendemos tudo!</title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.4.0/build/cssreset/reset-min.css"/>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.4.0/build/cssfonts/fonts-min.css"/>
   <%= stylesheet_link_tag :all %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "jquery.pikachoose" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+
+<div class="top">
+  <p>se tiver interesse por algum dos itens, por favor mande um email para <%= mail_to "fabio.kung+nathalia@gmail.com" %></p>
+  <h1><%=link_to raw("Bota Fora <em>Fabio e Nathalia</em>"), root_path %></h1>
+</div>
+
+<div class="content">
 <%= yield %>
+</div>
+
 </body>
 </html>

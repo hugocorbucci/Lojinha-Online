@@ -1,4 +1,9 @@
 .bundle
+.env
 db/*.sqlite3
 log/*.log
 tmp/
+products.csv
+photos/
+photos-big/
+.DS_Store
