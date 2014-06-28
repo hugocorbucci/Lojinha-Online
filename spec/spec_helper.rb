@@ -14,11 +14,11 @@ RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.orm = "mongoid"
+    DatabaseCleaner.start
   end
   
   config.before(:each) do
     DatabaseCleaner.clean
-    Mongoid.master.collections.select { |c| c.name !~ /system/ }.each(&:drop)
   end
   
   # == Mock Framework

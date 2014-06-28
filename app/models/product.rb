@@ -18,11 +18,11 @@ class Product
   
   validates_presence_of :id, :name, :price
   
-  scope :sorted, order_by(_id: :asc)
-  scope :available, where(:sold.ne => true)
-  scope :sold, where(sold: true)
-  scope :pending_payment, where(sold: true, paid: false)
-  scope :pending_delivery, where(sold: true, delivered: false)
+  scope :sorted, -> { order_by(:_id => :asc) }
+  scope :available, -> { where(:sold.ne => true) }
+  scope :sold, -> { where(sold: true) }
+  scope :pending_payment, -> { where(sold: true, paid: false) }
+  scope :pending_delivery, -> { where(sold: true, delivered: false) }
 
   def sell_to(name)
     self[:buyer] = name

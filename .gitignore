@@ -7,3 +7,6 @@ products.csv
 photos/
 photos-big/
 .DS_Store
+vendor/bundle/
+db/data/
+imagens/
