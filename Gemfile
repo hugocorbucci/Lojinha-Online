@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby '1.9.3'
 
-gem 'rails', '4.1.3'
+gem 'rails', '4.1.4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -12,13 +12,13 @@ gem 'mongoid_taggable', :git => 'git://github.com/wilkerlucio/mongoid_taggable.g
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 
 gem 'heroku'
-gem 'rake', '10.3.2'
+gem 'rake'
 gem 'aws-sdk'
 gem 'thin'
 
 group :test, :development do
   gem 'rr'
-  gem 'hoe', '2.8.0'
+  gem 'hoe'
   gem 'mongoid-rspec'
   gem 'rspec-core'
   gem 'rspec-rails'
