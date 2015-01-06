@@ -116,10 +116,10 @@ GEM
       tzinfo (>= 0.3.37)
     mongoid-paperclip (0.0.9)
       paperclip (>= 2.3.6)
-    mongoid-rspec (2.0.0.rc1)
+    mongoid-rspec (2.0.0)
       mongoid (~> 4.0.0)
       rake
-      rspec (~> 3.0)
+      rspec (~> 3.1)
     mongoid_search (0.3.2)
       fast-stemmer (~> 1.0.0)
       mongoid (>= 3.0.0)
@@ -233,7 +233,7 @@ DEPENDENCIES
   hoe
   mongoid (~> 4.0)
   mongoid-paperclip
-  mongoid-rspec (= 2.0.0.rc1)
+  mongoid-rspec
   mongoid_search
   mongoid_taggable!
   rails (= 4.2.0)

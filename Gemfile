@@ -15,7 +15,7 @@ gem 'thin'
 group :test, :development do
   gem 'rr'
   gem 'hoe'
-  gem 'mongoid-rspec', '2.0.0.rc1'
+  gem 'mongoid-rspec'
   gem 'rspec-core'
   gem 'rspec-rails'
   gem 'webrat'
