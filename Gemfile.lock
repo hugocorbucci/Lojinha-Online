@@ -116,7 +116,7 @@ GEM
       tzinfo (>= 0.3.37)
     mongoid-paperclip (0.0.9)
       paperclip (>= 2.3.6)
-    mongoid-rspec (2.0.0)
+    mongoid-rspec (2.1.0)
       mongoid (~> 4.0.0)
       rake
       rspec (~> 3.1)
