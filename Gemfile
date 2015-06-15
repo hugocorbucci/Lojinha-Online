@@ -16,7 +16,6 @@ group :test, :development do
   gem 'rr'
   gem 'hoe'
   gem 'mongoid-rspec'
-  gem 'rspec-core'
   gem 'rspec-rails'
   gem 'webrat'
   gem 'cucumber-rails', require: false
