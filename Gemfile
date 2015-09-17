@@ -3,7 +3,7 @@ ruby '2.2.2'
 
 gem 'rails', '4.2.4'
 
-gem 'mongoid', '~> 4.0'
+gem 'mongoid', '~> 5.0'
 gem 'mongoid_search'
 gem 'mongoid_taggable', git: 'git://github.com/wilkerlucio/mongoid_taggable.git'
 gem 'mongoid-paperclip', require: 'mongoid_paperclip'
