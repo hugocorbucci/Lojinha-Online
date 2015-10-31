@@ -18,8 +18,6 @@ group :test, :development do
   gem 'mongoid-rspec'
   gem 'rspec-rails'
   gem 'webrat'
-  gem 'cucumber-rails', require: false
-  gem 'cucumber'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
