@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby '2.3.0'
 
-gem 'rails', '4.2.5'
+gem 'rails', '~> 4.2'
 
 gem 'mongoid', '~> 5.0'
 gem 'mongoid_search'
