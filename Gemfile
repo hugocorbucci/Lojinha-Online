@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby '2.3.0'
 
-gem 'rails', '~> 4.2'
+gem 'rails', '~> 4.2' # TODO: Cannot upgrade rails to 5.0 until mongoid 6.0 is released
 
 gem 'mongoid', '~> 5.0'
 gem 'mongoid_search'
