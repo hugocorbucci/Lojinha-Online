@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/wilkerlucio/mongoid_taggable.git
+  remote: https://github.com/wilkerlucio/mongoid_taggable.git
   revision: 44a843bf8a56a7ed9f53fc57deb2a27fc3d63e6d
   specs:
     mongoid_taggable (1.1.1)
@@ -7,7 +7,7 @@ GIT
       rake
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     actioncable (5.0.0.1)
       actionpack (= 5.0.0.1)
@@ -48,12 +48,12 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (7.1.4)
-    aws-sdk (2.6.9)
-      aws-sdk-resources (= 2.6.9)
-    aws-sdk-core (2.6.9)
+    aws-sdk (2.6.13)
+      aws-sdk-resources (= 2.6.13)
+    aws-sdk-core (2.6.13)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.6.9)
-      aws-sdk-core (= 2.6.9)
+    aws-sdk-resources (2.6.13)
+      aws-sdk-core (= 2.6.13)
     bson (4.1.1)
     builder (3.2.2)
     capybara (2.10.1)
@@ -106,7 +106,7 @@ GEM
     minitest (5.9.1)
     mongo (2.3.0)
       bson (~> 4.1)
-    mongoid (6.0.0)
+    mongoid (6.0.2)
       activemodel (~> 5.0)
       mongo (~> 2.3)
     mongoid-paperclip (0.0.11)
