@@ -1,29 +1,27 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 
-gem 'rails', '~> 5.0'
-
+gem 'aws-sdk'
+gem 'bundler', '~> 1.13'
 gem 'mongoid', '~> 6.0'
+gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'mongoid_search'
 gem 'mongoid_taggable', git: 'https://github.com/wilkerlucio/mongoid_taggable.git'
-gem 'mongoid-paperclip', require: 'mongoid_paperclip'
-
+gem 'rails', '~> 5.0'
 gem 'rake'
-gem 'aws-sdk'
 gem 'thin'
-gem 'bundler', '~> 1.13'
 
 group :test, :development do
-  gem 'rr'
-  gem 'hoe'
-  gem 'rspec-rails'
-  gem 'webrat'
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
-  gem 'spork'
-  gem 'simplecov'
-  gem 'foreman'
   gem 'dotenv-rails'
+  gem 'factory_girl_rails'
+  gem 'foreman'
+  gem 'hoe'
+  gem 'rr'
+  gem 'rspec-rails'
+  gem 'rubocop'
+  gem 'simplecov'
+  gem 'spork'
+  gem 'webrat'
 end
-
