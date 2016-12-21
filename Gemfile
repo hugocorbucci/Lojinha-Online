@@ -17,7 +17,6 @@ group :test, :development do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'foreman'
-  gem 'hoe'
   gem 'rr'
   gem 'rspec-rails'
   gem 'rubocop'
