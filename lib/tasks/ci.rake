@@ -1,4 +1,5 @@
 # encoding: UTF-8
+
 desc 'Task to run on CI: runs rubocop and RSpec specs'
 task ci: %i(spec rubocop)
 
