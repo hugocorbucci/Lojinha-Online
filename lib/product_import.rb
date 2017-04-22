@@ -2,7 +2,7 @@ require 'csv'
 
 # Helps import products from a CSV.
 class ProductImport
-  HEADERS = %w(_id name price description link).freeze
+  HEADERS = %w[_id name price description link].freeze
 
   def self.load(filename)
     import = new(filename)

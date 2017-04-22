@@ -1,6 +1,6 @@
 # Handles showing all and a single product available to be sold
 class ProductsController < ApplicationController
-  before_filter :authenticate_user!, except: %i(index show)
+  before_filter :authenticate_user!, except: %i[index show]
 
   # GET /products
   # GET /products.xml
