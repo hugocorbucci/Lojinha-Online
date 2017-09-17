@@ -4,7 +4,7 @@ class PhotoImport
     importer = PhotoImport.new(filepath)
     importer.products.each do |product_id|
       product = Product.where(_id: product_id).first
-      product = create_product(product_id) unless product
+      product ||= create_product(product_id)
 
       importer.populate(product, product_id) if product
     end
