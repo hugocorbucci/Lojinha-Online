@@ -15,7 +15,7 @@ group :test, :development do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'dotenv-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'foreman'
   gem 'rr'
   gem 'rspec-rails'
