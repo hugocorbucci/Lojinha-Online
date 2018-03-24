@@ -5,7 +5,7 @@ ruby '2.3.1'
 
 gem 'aws-sdk'
 gem 'bundler', '~> 1.13'
-gem 'mongoid', '~> 6.0'
+gem 'mongoid', '~> 7.0'
 gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'mongoid_search'
 gem 'mongoid_taggable', git: 'https://github.com/wilkerlucio/mongoid_taggable.git'
