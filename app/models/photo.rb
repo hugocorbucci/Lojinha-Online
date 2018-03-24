@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 # Represents a picture of a product
 class Photo
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Paperclip
-  FILE_PATH = "#{Rails.env}/:attachment/:id/:style/:filename".freeze
+  FILE_PATH = "#{Rails.env}/:attachment/:id/:style/:filename"
 
   embedded_in :product, inverse_of: :photos
 

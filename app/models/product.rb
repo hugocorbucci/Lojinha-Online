@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Represents the model for a product
 class Product
   include Mongoid::Document

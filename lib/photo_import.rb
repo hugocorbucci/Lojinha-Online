@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Helps importing pictures from the filesystem.
 class PhotoImport
   def self.load(filepath)

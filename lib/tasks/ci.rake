@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 desc 'Task to run on CI: runs rubocop and RSpec specs'
 task ci: %i[spec rubocop]
 

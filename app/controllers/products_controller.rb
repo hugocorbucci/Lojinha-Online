@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Handles showing all and a single product available to be sold
 class ProductsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]

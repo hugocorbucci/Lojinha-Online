@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :product do
   desc "Loads products describe in a CSV file pointed by the 'filename' \
 variable"

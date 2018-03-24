@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :product do
   namespace :photo do
     desc 'Loads all photos available in the `directory` variable according to \
